@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media queries</title>
+</head>
+<body>
+  <main>
+    <div class="flex-container">
+      <div class="snap-item"></div>
+      <div class="snap-item"></div>
+      <div class="snap-item"></div>
+      <div class="snap-item"></div>
+    </div>
+  </main>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    main {
+      box-sizing: border-box;
+      scroll-snap-type: y mandatory;
+      height: 100vh;
+      width: 100vw;
+      border: 1em solid #3335;
+      background: #A9D;
+      overflow: scroll;
+    }
+    .flex-container {
+      display: flex;
+      /*flex-wrap: nowrap;*/
+      width: calc(4 * 100vw);
+    }
+    .snap-item {
+      scroll-snap-align: center;
+      background: grey;
+      border: solid;
+      width: 100vw;
+      margin: 10vw;
+      height: 70vh;
+    }
+  </style>
+</body>
+</html>
